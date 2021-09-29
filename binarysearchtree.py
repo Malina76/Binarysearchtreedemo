@@ -63,6 +63,3 @@ class foodMenu:
             elements += self.rightChildNode.inOrderTraversal()
 
         return elements
-© 2021 GitHub, Inc.
-Terms
-Privacy
