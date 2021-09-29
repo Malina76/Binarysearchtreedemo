@@ -70,7 +70,7 @@ elif option == 'Get the sorted food list':
 
     if st.session_state.hasFood ==1:
         st.write("The list in the Food Menu:")
-        st.write(pd.DataFrame(st.session_state.Marlin'sFoodMenu.inOrderTraversal(),columns=["Food Name", "Price"]))
+        st.write(pd.DataFrame(st.session_state.RBAFoodMenu.inOrderTraversal(),columns=["Food Name", "Price"]))
 
     else:
         st.write("Empty Food Menu.")
