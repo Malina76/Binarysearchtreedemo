@@ -6,19 +6,7 @@ if 'hasFood' not in st.session_state:
     st.session_state.hasFood = 0
 
 
-st.header("Welcome to ABC Simple Food Menu Demo")
-
-readme = st.checkbox("readme first")
-
-if readme:
-
-    st.write("""
-        This is a simple binary search tree demo using [streamlit](https://streamlit.io/) library. It is hosted on [heroku](https://www.heroku.com/). You may get the codes via [github](https://github.com/richieyuyongpoh/binarySearchTreeDemo)
-        """)
-
-    st.write ("For more info, please contact:")
-
-    st.write("<a href='https://www.linkedin.com/in/yong-poh-yu/'>Dr. Yong Poh Yu </a>", unsafe_allow_html=True)
+st.header("Welcome to Marlin's Simple Food Menu Demo")
 
 st.write("Choose an option from the radio button on the side bar to continue.")
 
@@ -38,11 +26,11 @@ if option == 'Add a food':
 
             if st.session_state.hasFood==1:
 
-                st.session_state.RBAFoodMenu.addNode(foodName,foodPrice)
+                st.session_state.Marlin'sFoodMenu.addNode(foodName,foodPrice)
                 st.write("[{} , RM {}] has been added to the food Menu.".format(foodName, foodPrice))
             
             else:
-                st.session_state.RBAFoodMenu = foodMenu(foodName,foodPrice)
+                st.session_state.Marlin'sFoodMenu = foodMenu(foodName,foodPrice)
                 st.write("[{} , RM {}] has been added to the food Menu.".format(foodName, foodPrice))
                 st.session_state.hasFood = 1
 
@@ -69,7 +57,7 @@ elif option == 'Get the sorted food list':
 
     if st.session_state.hasFood ==1:
         st.write("The list in the Food Menu:")
-        st.write(pd.DataFrame(st.session_state.RBAFoodMenu.inOrderTraversal(),columns=["Food Name", "Price"]))
+        st.write(pd.DataFrame(st.session_state.Marlin'sFoodMenu.inOrderTraversal(),columns=["Food Name", "Price"]))
 
     else:
         st.write("Empty Food Menu.")
@@ -78,4 +66,4 @@ else:
     st.write("The food menu system has been reset.")
 
     st.session_state.hasFood = 0 
-    st.session_state.RBAFoodMenu = []
+    st.session_state.Marlin'sFoodMenu = []
